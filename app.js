@@ -3,9 +3,12 @@ var http = require('http');
 
 var server = http.createServer(function(req, res){
 	//console.log(req.url);
+	var content = "";
 	res.writeHead(200, {'Content-Type': 'text/plain'});
 	if(req.url==1){
-		var content = fs.readFileSync('Bhubaneswar.txt', 'utf8');
+		fs.readFile('Bhubaneswar.txt', 'utf8', function(err, data){
+			content = data;
+		});
 	}
 	res.end(content);
 });
