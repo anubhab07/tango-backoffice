@@ -5,7 +5,7 @@ var server = http.createServer(function(req, res){
 	//console.log(req.url);
 	var content = "";
 	res.writeHead(200, {'Content-Type': 'text/plain'});
-	if(req.url==='1'){
+	if(req.url==='/1'){
 		fs.readFile('Bhubaneswar.txt', 'utf8', function(err, data){
 			content = data;
 		});
