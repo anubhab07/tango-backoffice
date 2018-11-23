@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/subhrm/tango-backoffice/issues"
   },
-  "homepage": "https://github.com/subhrm/tango-backoffice#readme"
+  "homepage": "https://github.com/subhrm/tango-backoffice#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
 }

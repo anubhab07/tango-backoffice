@@ -1,16 +1,14 @@
-var fs = require('fs');
-var http = require('http');
+var fs = require('fs')
+var express = require('express')
+var app = express()
+const port = 3000;
 
-var server = http.createServer(function(req, res){
-	
-	var topic = req.url.replace("/gk/", "");
-	if(topic.length>0){
-		res.writeHead(200, {'Content-Type': 'text/plain'});
-		fs.createReadStream(__dirname + '/'+ topic + '.txt').pipe(res);
-	} else {
-		res.writeHead(404);
-	}
-});
+app.get('/gk/:topic', function (req, res) {
+	fs.readFile(req.params.topic+'.txt', 'utf8', function(err, contents) {
+    	res.send(contents);
+	})
+})
 
-server.listen(3000, '0.0.0.0');
+app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+
 console.log('server started');
