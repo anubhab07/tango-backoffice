@@ -10,12 +10,12 @@ ans = "[";
 fs.readdirSync('./').forEach(file => {
     if(file.indexOf('txt') >=0 ){
         c++;
-        ans += "'" + file.substr(0, file.length-4) + "',";
+        ans += "\"" + file.substr(0, file.length-4) + "\",";
     }
 })
 
 ans = ans.slice(0, ans.length-1) +  "]"
-l = "{'count': " + c + ", 'topics': " + ans + "}"
+l = "{\"count\": " + c + ", \"topics\": " + ans + "}"
 
 // fs.readdir('./', (err, files) => {
 //   files.forEach(file => {
