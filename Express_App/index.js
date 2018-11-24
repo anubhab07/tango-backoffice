@@ -144,7 +144,7 @@ function  leaveContext(leaveDetail){
 
 //Returning context for user search data
 function createContext(employee){
-    var context = `The employee id ${employee.emp_id} belongs to ${employee.emp_name} . You have a total of  ${employee.leave_balance} leaves left. Your total leave balance is ${employee.leave_balance}. You can avail a total of ${employee.leave_balance} leaves. You have ${employee.leave_balance} leaves remaining. Your pending leaves are ${employee.leave_balance}. You can apply for ${employee.leave_balance} leaves if required. You have submitted ${employee.leave_requests} requests for approval. You have ${employee.leave_requests} leave requests pending for approval from your manager. Your manager is ${employee.manager_name}. `
+    var context = `The employee id ${employee.emp_id} belongs to ${employee.emp_name} . You have a total of  ${employee.leave_balance} leaves left. Your total leave balance is ${employee.leave_balance}. You can avail a total of ${employee.leave_balance} leaves. You have ${employee.leave_balance} leaves remaining. Your pending leaves are ${employee.leave_balance}. You can apply for ${employee.leave_balance} leaves if required. You have submitted ${employee.leave_requests} requests for approval. You have ${employee.leave_requests} leave requests pending for approval from your manager. You have applied for ${employee.leave_requests} leaves already. Your applied leaves are ${employee.leave_requests}. Your manager is ${employee.manager_name}. `
     console.log("Context: ", context);
     return context;
 }
