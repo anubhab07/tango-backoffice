@@ -1,7 +1,10 @@
+//installed packages
 const express = require("express");
 const app = express();
 const cors = require('cors');
 const MongoClient = require('mongodb').MongoClient;
+
+//database server 
 const URL = "mongodb://localhost:27017/";
  var EMPLOYEE,HARMONY_ID;
  var bodyParser = require('body-parser');
