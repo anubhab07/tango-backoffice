@@ -1,5 +1,5 @@
-var express = require("express");
-var app = express();
+const express = require("express");
+const app = express();
 const cors = require('cors');
 const MongoClient = require('mongodb').MongoClient;
 const URL = "mongodb://localhost:27017/";
@@ -13,10 +13,8 @@ const URL = "mongodb://localhost:27017/";
 app.listen(3000, () => {
  console.log("Server running on port 3000");
 });
-app.get("/url", (req, res, next) => {
-    res.json(["Tony","Lisa","Michael","Ginger","Food"]);
-   });
 
+   //validate a user when he/ she provides his user id localhost:3000/validateUser?tagId=3
 app.get("/validateUser", function(req, res) {
 console.log("Called",req.query.tagId);
 var harmonyId= parseInt( req.query.tagId);
@@ -50,6 +48,7 @@ MongoClient.connect(URL, function(err, db) {
 );  
 });
 
+//Get the latest leave detail by passing emp_id http://localhost:3000//lastLeaveDetail?id=772377
 app.get("/lastLeaveDetail",function(req, res){
     console.log("Called",req.query.id);
     var employeeId= parseInt( req.query.id);
@@ -79,7 +78,7 @@ app.get("/lastLeaveDetail",function(req, res){
     );    
 });
 
-
+//Incoming post request to apply for a leave date-format: "2019-01-22"
 app.post('/applyLeave', function(req, resp) {
     var empId = req.body.emp_id;
     var numberOfDays = req.body.duration;
