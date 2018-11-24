@@ -83,14 +83,14 @@ app.get("/lastLeaveDetail",function(req, res){
 app.post('/applyLeave', function(req, resp) {
     var empId = req.body.emp_id;
     var numberOfDays = req.body.duration;
-    var startDate = Date(req.body.start_date);
-    var endDate = Date(req.body.end_date);
+    var startDate = new Date(req.body.start_date);
+    var endDate = new Date(req.body.end_date);
     MongoClient.connect(URL, function(err, db) {
         var dbo = db.db("USER_DB_FOR_MAKEATHON_3");
         if (err) throw err;
         dbo.collection("leave_transactions").insertOne({
             "emp_id" : empId,
-            "request_date" : Date(),
+            "request_date" : new Date(),
             "number_of_days" : parseInt(numberOfDays),
             "start_date" : startDate,
             "end_date" : endDate,
@@ -126,7 +126,7 @@ app.post('/applyLeave', function(req, resp) {
 
 //Returning context for leave transaction data
 function  leaveContext(leaveDetail){
-    var date = Date();
+    var date = new Date();
     var leaveDetailsString;
     console.log("Leave :",date, leaveDetail.start_date);
     if(date <= leaveDetail.start_date){
