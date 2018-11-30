@@ -1,0 +1,80 @@
+[{
+	"emp_id" : 772377,
+	"harmony_id" : 1231,
+	"emp_name" : "Tejasvi Tata",
+	"phone_no" : 8895253674,
+	"mail_id" : "tatatejasvi@gmail.com",
+	"manager_name" : "Manoj",
+	"leave_balance" : 9,
+	"leave_requests" : 3
+},
+{
+	"emp_id" : 766227,
+	"harmony_id" : 1232,
+	"emp_name" : "Tirthankar Parija",
+	"phone_no" : 7873824204,
+	"mail_id" : "parija.tirthankar@gmail.com",
+	"manager_name" : "Manoj",
+	"leave_balance" : 11,
+	"leave_requests" : 3
+},
+{
+	"emp_id" : 751062,
+	"harmony_id" : 1233,
+	"emp_name" : "Anubhab Mondal",
+	"phone_no" : 8296282882,
+	"mail_id" : "anubhab.mondal11@gmail.com",
+	"manager_name" : "Manoj",
+	"leave_balance" : 11,
+	"leave_requests" : 4
+},
+{
+	"emp_id" : 751224,
+	"harmony_id" : 1234,
+	"emp_name" : "Nilesh Sinha",
+	"phone_no" : 8596019007,
+	"mail_id" : "nileshsinha037@gmail.com",
+	"manager_name" : "Manoj",
+	"leave_balance" : 12,
+	"leave_requests" : 4
+},
+{
+	"emp_id" : 111111,
+	"harmony_id" : 1235,
+	"emp_name" : "Harry Potter",
+	"phone_no" : 8895253674,
+	"mail_id" : "pHarry@gmail.com",
+	"manager_name" : "Manoj",
+	"leave_balance" : 9,
+	"leave_requests" : 3
+},
+{
+	"emp_id" : 222222,
+	"harmony_id" : 1236,
+	"emp_name" : "Ron Weasley",
+	"phone_no" : 7873824204,
+	"mail_id" : "ron.weasely@gmail.com",
+	"manager_name" : "Manoj",
+	"leave_balance" : 11,
+	"leave_requests" : 3
+},
+{
+	"emp_id" : 334452,
+	"harmony_id" : 1237,
+	"emp_name" : "Hermione Granger",
+	"phone_no" : 8296282882,
+	"mail_id" : "hermoine.g@gmail.com",
+	"manager_name" : "Manoj",
+	"leave_balance" : 11,
+	"leave_requests" : 4
+},
+{
+	"emp_id" : 988898,
+	"harmony_id" : 1238,
+	"emp_name" : "Professor Dumbledore",
+	"phone_no" : 8596019007,
+	"mail_id" : "nileshsinha037@gmail.com",
+	"manager_name" : "Manoj",
+	"leave_balance" : 12,
+	"leave_requests" : 4
+}]
