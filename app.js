@@ -5,7 +5,8 @@ const cors = require('cors');
 const MongoClient = require('mongodb').MongoClient;
 const ObjectId = require('mongodb').ObjectID;
 //database server 
-const URL = "mongodb://localhost:27017/";
+const URL = "mongodb://PracticeCluster:ffS4otjgufC7Shgd@practicecluster-shard-00-00-t1raj.mongodb.net:27017,practicecluster-shard-00-01-t1raj.mongodb.net:27017,practicecluster-shard-00-02-t1raj.mongodb.net:27017/test?ssl=true&replicaSet=PracticeCluster-shard-0&authSource=admin&retryWrites=true";
+// const URL = "mongodb://localhost:27017/";
  var EMPLOYEE,HARMONY_ID;
  var bodyParser = require('body-parser');
  app.use(bodyParser.json()); // support json encoded bodies
@@ -302,3 +303,10 @@ function createContext(employee){
 //     }
 //     );  
 // }
+
+
+// mongodump --host PracticeCluster-shard-0/practicecluster-shard-00-00-t1raj.mongodb.net:27017,practicecluster-shard-00-01-t1raj.mongodb.net:27017,practicecluster-shard-00-02-t1raj.mongodb.net:27017 --ssl --username PracticeCluster --password ffS4otjgufC7Shgd --authenticationDatabase admin --db USER_DB_FOR_MAKEATHON_3
+// mongodump --host PracticeCluster-shard-0/practicecluster-shard-00-00-t1raj.mongodb.net:27017,practicecluster-shard-00-01-t1raj.mongodb.net:27017,practicecluster-shard-00-02-t1raj.mongodb.net:27017 --ssl --username PracticeCluster --password ffS4otjgufC7Shgd --authenticationDatabase admin --db USER_DB_FOR_MAKEATHON_3
+
+// docker run --rm -v $(pwd):/workdir/ -w /workdir/ mongo:4.0 mongodump -h server -d $database --out /workdir/dump/
+// mongoimport --host PracticeCluster-shard-0/practicecluster-shard-00-00-t1raj.mongodb.net:27017,practicecluster-shard-00-01-t1raj.mongodb.net:27017,practicecluster-shard-00-02-t1raj.mongodb.net:27017 --ssl --username PracticeCluster --password ffS4otjgufC7Shgd --authenticationDatabase admin --db USER_DB_FOR_MAKEATHON_3 --collection employees --type json --file employees.json
